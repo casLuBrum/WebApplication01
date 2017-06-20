@@ -4,6 +4,7 @@ using System.Linq;
 using System.Web;
 using System.Web.Mvc;
 using WebApplication1.Models;
+using WebApplication1.Models.WebApplication1.Models;
 
 namespace WebApplication1.Controllers
 {
@@ -16,7 +17,6 @@ namespace WebApplication1.Controllers
             return View();
         }
 
-        [ActionName("kkk")]
         public ActionResult Fichas()
         {
             List<Ficha> fichas = fichaService.ObterTodasFichas();

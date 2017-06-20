@@ -2,6 +2,7 @@
 using System.Collections.Generic;
 using System.Linq;
 using System.Web;
+using WebApplication1.Models.WebApplication1.Models;
 
 namespace WebApplication1.Models
 {
@@ -10,7 +11,7 @@ namespace WebApplication1.Models
         static List<Ficha> fichas = new List<Ficha>();
         public FichaService()
         {
-            for(int i = 0; i < 30; i++)
+            for (int i = 0; i < 30; i++)
             {
                 Ficha ficha = new Ficha();
                 ficha.Id = i;
