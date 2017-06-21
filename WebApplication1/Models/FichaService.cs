@@ -37,5 +37,12 @@ namespace WebApplication1.Models
         {
             fichas[ficha.Id] = ficha;
         }
+
+        public int incluirFicha(Ficha ficha)
+        {
+            ficha.Id = fichas.Count;
+            fichas.Add(ficha);
+            return ficha.Id;
+        }
     }
 }

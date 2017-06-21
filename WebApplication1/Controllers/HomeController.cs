@@ -22,5 +22,25 @@ namespace WebApplication1.Controllers
             List<Ficha> fichas = fichaService.ObterTodasFichas();
             return View(fichas);
         }
+
+        [HttpGet]
+        public ActionResult DetalheFicha (int id)
+        {
+            Ficha ficha = fichaService.ObterFicha(id);
+            return View(ficha);
+        }
+
+        [HttpGet]
+        public ActionResult IncluirFicha ()
+        {
+            return View();
+        }
+
+        [HttpPost]
+        public ActionResult IncluirFicha (Ficha ficha)
+        {
+            fichaService.incluirFicha(ficha);
+            return View("DetalheFicha", ficha);
+        }
     }
 }
